@@ -6,4 +6,5 @@ Este proyecto planea combinar las ventajas de diversas aplicaciones de estudio c
 
 ![image](https://github.com/user-attachments/assets/4e56acb7-5ccc-4cc4-8230-5c1b18f74fb0)
 
-> [!CAUTION] o será compatible con aquellas aplicaciones que por defeto no permitan ser sincronizadas.
+> .[!NOTE].
+> No será compatible con aquellas aplicaciones que por defeto no permitan ser sincronizadas.
