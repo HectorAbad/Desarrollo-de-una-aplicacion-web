@@ -17,7 +17,6 @@ Este proyecto planea combinar las ventajas de diversas aplicaciones de estudio c
 7. Generar notas con apuntes escritos con stylus.
 8. Generar targetas de estudio con la información dentro de la aplicación.
 9. Lectura y modificación de pdf.
-10. 
 ## Configuraciones
 
 - La aplicación acepta ***modo normal*** y ***modo obscuro***
