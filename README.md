@@ -18,11 +18,17 @@ Este proyecto planea combinar las ventajas de diversas aplicaciones de estudio c
 8. Generar targetas de estudio con la información dentro de la aplicación.
 9. Lectura y modificación de pdf.
 ## Configuraciones
-
 - La aplicación acepta ***modo normal*** y ***modo obscuro***
 - Configuración para el tamaño y tipo de letra
 - Inmersión en la ***pantalla copleta*** o sincronización con otras aplicaciónes para ***pantalla dividida*** o en ***segundo plano***.
 - Sincronización para trabajar entre varios dispositivos ya sean de computadora o de telefono.
+
+## Código.
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
 ## Creador
 
 Héctor Abad Rodríguez.
