@@ -17,17 +17,108 @@ Este proyecto planea combinar las ventajas de diversas aplicaciones de estudio c
 7. Generar notas con apuntes escritos con stylus.
 8. Generar targetas de estudio con la información dentro de la aplicación.
 9. Lectura y modificación de pdf.
+10. Insertar código de cualquier lenguaje y mostrarlo con colores
 ## Configuraciones
 - La aplicación acepta ***modo normal*** y ***modo obscuro***
 - Configuración para el tamaño y tipo de letra
 - Inmersión en la ***pantalla copleta*** o sincronización con otras aplicaciónes para ***pantalla dividida*** o en ***segundo plano***.
 - Sincronización para trabajar entre varios dispositivos ya sean de computadora o de telefono.
 
-## Código.
+## Ejemplo de inserción de código en la plataforma.
 ```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+using System;
+using System.Threading;
+namespace Expendedoras_2025_1
+{
+    public class Expendedora
+    {
+        #region Atributos
+
+        private string _marca;
+        private sbyte _temperatura;
+        private ushort _cantProductos;
+        private float _precio;
+
+        public sbyte Temperatura { get => _temperatura; 
+            set 
+            {
+                if (value >= 10 && value < 21)
+                { 
+                    _temperatura = value; 
+                }
+                else
+                    _temperatura = 18;
+            }
+        }
+
+        public string Marca { get => _marca; set => _marca = value; }
+        #endregion
+
+        public void Saludar()
+        { 
+        
+            Console.WriteLine("{0} Bienvenido, elige tu producto \n Temperatura {1} °C", Marca, Temperatura);
+
+        }
+        #region Constructores
+        public abstract Expendedora()
+        {
+        
+            //_temperatura = 25;
+            //_precio = 15;
+            //Marca = "AWS";
+            //Saludar();
+            //ClearDisplay();
+            //string codigo = MostrarProducto();
+            //Thread.Sleep(5000);
+            //Console.Clear();
+            //MostrarPrecio(codigo);
+        }
+        public Expendedora(bool mantenimiento)
+        {
+            if (mantenimiento)
+            {
+                Console.WriteLine("Hola, Ingrea la nueva temperatura:");
+                    _temperatura = sbyte.Parse(Console.ReadLine());
+                Console.WriteLine("Temperatura actualizada {0}",_temperatura);
+            }
+            else
+            {
+                Console.WriteLine("Modo estandar");
+            }
+        }
+        #endregion
+        public void ClearDisplay()
+        {
+            Thread.Sleep(5000);
+            Console.Clear();
+        }
+        public string MostrarProducto()
+        {
+            string codigo;
+            Console.WriteLine("2A: Papas \t 3C: Chocolate");
+            Console.WriteLine("Ingrese el código del producto");
+            codigo = Console.ReadLine();   
+            return codigo;
+        }
+
+        public void MostrarPrecio (string codigo)
+        {
+            switch (codigo)
+            {
+                case "2A":
+                    Console.WriteLine("Precio: ${0}", _precio);
+                    break;
+                case "3C":
+                    Console.WriteLine("Precio: ${0}", _precio +=5);
+                    break;
+                default:
+                    Console.WriteLine("Producto no encontrado");
+                    break;
+            }
+            }
+    }
+}
 ```
 ## Creador
 
